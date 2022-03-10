@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+    tor:
+        image: lncm/tor:0.4.5.7@sha256:a83e0d9fd1a35adf025f2f34237ec1810e2a59765988dce1dfb222ca8ef6583c
+        user: toruser
+        restart: on-failure
+        volumes:
+            - ./tor/data:/etc/tor
+            - ./tor/data:/var/lib/tor
+        ports:
+          - 9052:9052
+        networks:
+            default:
+                ipv4_address: "174.26.2.2"
+
+    tunnel:
+        build:
+            context: ./
+            dockerfile: tunnel/Dockerfile
+        depends_on: [ tor ]
+        volumes:
+            - ./scripts:/scripts
+        restart: always
+        entrypoint:
+            - python3
+            - /scripts/tunnel.py
+            - --listen-host=0.0.0.0
+            - --listen-port=8332
+            - --connect-host=yourumbrelbitcoincoretorhostname.onion
+            - --connect-port=8332
+        ports:
+          - 8332:8332
+        expose: [8332]
+
+networks:
+    default:
+      name: PyNodeTunnel
+      ipam:
+          driver: default
+          config:
+              - subnet: "174.26.2.0/24"
+volumes:
+    dbdata:
