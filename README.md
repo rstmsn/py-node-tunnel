@@ -26,16 +26,16 @@ To setup py-node-tunnel, edit docker-compose.yaml and update the following lines
 
 ```yaml
 tunnel:
-	entrypoint:
-		--connect-host=umbrelbitcoincorerpchostname.onion
-		--connect-port=8332
+  entrypoint:
+    --connect-host=umbrelbitcoincorerpchostname.onion
+    --connect-port=8332
 ```
 By default, py-node-tunnel will listen for incoming connections on the local machine on port 8332. To change this, edit the following line in docker-compose.yaml:
 
 ```yaml
 tunnel:
-	entrypoint:
-		--listen-port=8332
+  entrypoint:
+    --listen-port=8332
 ```
 
 ## Launching py-node-tunnel
