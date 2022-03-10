@@ -1,6 +1,6 @@
 # py-node-tunnel
 Personal servers such as Umbrel offer Bitcoin users a quick and easy way to self host a Bitcoin & Lightning Network Node.
-At present, Umbrel does not allow it's Bitcoin Core instance to accept incoming connections over clearnet. All connections must take place over Tor.
+At present, Umbrel does not allow it's Bitcoin Core instance to accept incoming connections over clearnet. All incoming connections must happen over Tor.
 This has both security and privacy benefits, however, it presents a challenge for some users who wish to connect apps with no existing proxy/Tor support to their Umbrel Bitcoin Core node.
 
 A good example is hardware wallet manufacturer Ledger's desktop software 'Ledger Live'.
