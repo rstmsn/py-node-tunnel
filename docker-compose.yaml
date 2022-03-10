@@ -40,5 +40,3 @@ networks:
           driver: default
           config:
               - subnet: "174.26.2.0/24"
-volumes:
-    dbdata:
