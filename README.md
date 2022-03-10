@@ -10,7 +10,7 @@ py-node-tunnel provides a solution to this problem, until such times as native p
 
 When launched, py-node-tunnel runs an instance of Tor on the users local machine, as well as a python based tunnel script.
 The tunnel script opens a port on the local machine, and proceeds to listen for incoming connections.
-When a connection is initiated, py-node-tunnel routes the requests over Tor, to the desired target Bitcoin node.
+When a connection is initiated, py-node-tunnel routes the requests over Tor, to the desired Bitcoin hidden service node.
 
 ## Requirements
 
