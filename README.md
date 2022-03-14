@@ -5,6 +5,7 @@ This has both security and privacy benefits, however, it presents a challenge fo
 
 A good example is hardware wallet manufacturer Ledger's desktop software 'Ledger Live'.
 Ledger Live allows a user to connect and use their own Bitcoin Core node to validate transactions, verify wallet balances, etc. This improves a users opsec as it avoids the use of Ledgers remote surveillance node.
+Unfortuntaely, however, Ledger live does not offer outbound proxy support, and as such it is not currently possible to connect to a node operating as a Tor hidden service.
 
 py-node-tunnel provides a solution to this problem by running an instance of Tor on the users local machine, in conjunction with a python based tunnel script.
 The tunnel script opens a port on the machine, and proceeds to listen for incoming connections.
