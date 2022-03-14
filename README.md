@@ -43,7 +43,7 @@ To launch py-node-tunnel, cd to the py-node-tunnel and run:
 `docker-compose up -d`
 
 ## Using py-node-tunnel
-When using an application that can connect to a Bitcoin Core node, but does not support  proxys/Tor, simply connect to localhost:8332 instead, and your connection will be routed over Tor to the target Bitcoin Core hidden service node. 
+When using an application that can connect to a Bitcoin Core node, but does not support proxys/Tor, simply configure your software to connect to localhost:8332 instead, and your connection will be routed over Tor to the target Bitcoin Core hidden service node. 
 
 #### Credits
 Thanks to WangYihang for the python tunnel gist:
