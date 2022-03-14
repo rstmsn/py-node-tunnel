@@ -4,12 +4,10 @@ At present, Umbrel does not allow it's Bitcoin Core instance to accept incoming 
 This has both security and privacy benefits, however, it presents a challenge for some users who wish to connect apps with no existing proxy/Tor support to their Umbrel Bitcoin Core node.
 
 A good example is hardware wallet manufacturer Ledger's desktop software 'Ledger Live'.
-Ledger Live allows a user to connect and use their own Bitcoin Core node to validate transactions, verify wallet balances, etc. This is a much more secure approach than using Ledger's own surveillance node.
+Ledger Live allows a user to connect and use their own Bitcoin Core node to validate transactions, verify wallet balances, etc. This improves a users opsec as it avoids the use of Ledgers remote surveillance node.
 
-py-node-tunnel provides a solution to this problem, until such times as native proxy/Tor support is added.
-
-When launched, py-node-tunnel runs an instance of Tor on the users local machine, as well as a python based tunnel script.
-The tunnel script opens a port on the local machine, and proceeds to listen for incoming connections.
+py-node-tunnel provides a solution to this problem by running an instance of Tor on the users local machine, in conjunction with a python based tunnel script.
+The tunnel script opens a port on the machine, and proceeds to listen for incoming connections.
 When a connection is initiated, py-node-tunnel routes the requests over Tor, to the desired Bitcoin hidden service node.
 
 ## Requirements
